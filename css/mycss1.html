@@ -1,0 +1,181 @@
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        background-color: blue;
+        color: black;
+    }
+     h3,h4{
+        font-weight: 700px;
+     }
+      #site{
+        display: grid;
+      }
+      #site>div{
+        background-color: blue;
+        border: 1px solid black;
+        margin-bottom: 10px;
+      }
+      #banner{
+        grid-area: banner;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #banner>nav>div{
+        display: flex;
+        list-style-type: none;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      #banner>nav>ul>li:last-child{
+        margin-right: 10px;
+      }
+      #banner>nav>ul>li > a:link
+      #banner>nav>ul>li > a:visited{
+        border: 1px solid black;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+      }
+      #product1{
+        grid-area: product1;
+      }
+       #product2{
+        grid-area: product2;
+      }
+       #product3{
+        grid-area: product3;
+
+      }
+       #product4{
+        grid-area: product4;
+      }
+      #offer_1 {
+    grid-area: offer_1;
+}
+
+#offer_2 {
+    grid-area: offer_2;
+}
+
+#brand_logo {
+    grid-area: brand_logo;
+}
+
+#menu {
+    display: none;
+    /* remove html element from page */
+    /* visibility: hidden; */
+}
+#mobile_menu {
+    border: 2px solid black;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100vw;
+    display: none;
+}
+
+#mobile_menu>ul {
+    list-style-type: none;
+}
+
+#mobile_menu>ul>li {
+    line-height: 200%;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 0 = fully transparent, 1 = solid */
+}
+#mobile_menu>ul>li>a:link,
+#mobile_menu>ul>li>a:visited {
+    color: white;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.product>h4 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.product>img {
+    height: 220px;
+    width: auto;
+}
+
+.product>span {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+/*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 767px) {
+
+    /* code in this block will be applied only if device width>320 and <480 */
+    #site {
+        grid-template-areas: "banner"
+            "product1"
+            "product2"
+            "product3"
+            "product4"
+            "offer_1"
+            "offer_2"
+            "brand_logo";
+        grid-template-rows: repeat(8, auto);   }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+    /* code in this block will be applied only if device width>768 and <1024 */
+    #site {
+        grid-template-areas: "banner banner"
+            "product1 product2"
+            "product3 product4"
+            "offer_1 offer_1"
+            "offer_2 offer_2"
+            "brand_logo brand_logo";
+        grid-template-rows: repeat(8, auto);
+    }
+
+    #banner>h3 {
+        font-size: 20px;
+    }
+
+    #banner>nav {
+        display: none;
+    }
+     #menu {
+        display: inline-block;
+    }
+}
+@media (min-width: 1025px) {
+
+    /* code in this block will be applied only if device width>1025 and <1280 */
+    #site {
+        grid-template-areas: "banner banner banner banner"
+            "product1 product2 product3 product4"
+            "offer_1 offer_1 offer_2 offer_2"
+            "brand_logo brand_logo brand_logo brand_logo";
+        grid-template-rows: 80px 300px 300px  100px;
+    }
+
+    #banner>h3 {
+        font-size: 24px;
+    }
+}
+</style>

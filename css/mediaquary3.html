@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mycss1.html">
+
+</head>
+
+<body>
+    <div id="site">
+
+        <div id="banner">
+            <h3>the easy learn academey</h3>
+            <nav class="dastop-nav">
+                <ul>
+                    <li><a href="basic.html">home</a></li>
+                    <li><a href="basic1.html">about us</a></li>
+                    <li><a href="basic2.html">products</a></li>
+                    <li><a href="basic3.html">services</a></li>
+                    <li><a href="basic4.html">contact us</a></li>
+                </ul>
+            </nav>
+            <img id="menu" src="image10.png" alt="menu" onslick="Togglemenu();">
+        </div>
+        <div id="mobile_menu">
+            <ul>
+                <li><a href="basic.html">home</a></li>
+                <li><a href="basic1.html">about us</a></li>
+                <li><a href="basic2.html">products</a></li>
+                <li><a href="basic3.html">services</a></li>
+                <li><a href="basic4.html">contact us</a></li>
+            </ul>
+        </div>
+        <div class="product" id="product1">
+            <h4>product name 1</h4>
+
+            <img src="https://picsum.photos/200" alt="product1">
+            <span>
+                <p>$99.99</p>
+                <button>add to card</button>
+            </span>
+
+        </div>
+        <div class="product" id="product2">
+            <h4>product name 2</h4>
+
+            <img src="https://picsum.photos/200" alt="product2">
+            <span>
+                <p>$56.89</p>
+                <button>add to card</button>
+            </span>
+
+        </div>
+        <div class="product" id="product3">
+            <h4>product name 3</h4>
+
+            <img src="https://picsum.photos/200" alt="product3">
+            <span>
+                <p>$23.69</p>
+                <button>add to card</button>
+            </span>
+
+        </div>
+        <div class="product" id="product4">
+            <h4>product name 4</h4>
+
+            <img src="https://picsum.photos/200" alt="product4">
+            <span>
+                <p>$123.87</p>
+                <button>add to card</button>
+            </span>
+        </div>
+        <div class="offer" id="offer1">
+            <img src="https://picsum.photos/300/150" alt="offer1">
+            <p>special offer : get 20% off on your frist purchese!</p>
+            <a href="#">read more</a>
+        </div>
+        <div class="offer" id="offer2">
+            <img src="https://picsum.photos/300/150" alt="offer2">
+            <p>limited time deal : free shiping on your frist order over $150!</p>
+            <a href="#">read more</a>
+        </div>
+        <div id="brand_logo">
+            <img src="https://picsum.photos/100" alt="brand 1">
+            <img src="https://picsum.photos/100" alt="brand 2">
+            <img src="https://picsum.photos/100" alt="brand 3">
+            <img src="https://picsum.photos/100" alt="brand 4">
+            <img src="https://picsum.photos/100" alt="brand 5">
+            <img src="https://picsum.photos/100" alt="brand 6">
+            <img src="https://picsum.photos/100" alt="brand 7">
+            <img src="https://picsum.photos/100" alt="brand 8">
+            <img src="https://picsum.photos/100" alt="brand 9">
+            <img src="https://picsum.photos/100" alt="brand 10">
+        </div>
+    </div>
+    <script>
+          let isDisplayed = false;
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile_menu');
+            isDisplayed = !isDisplayed;
+            mobileMenu.style.display = isDisplayed ? 'block' : 'none';
+            }
+    </script>
+</body>
+
+</html>

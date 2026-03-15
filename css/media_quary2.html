@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+        }
+        #site>div{
+            border: solid 1px black;
+        }
+        #site{
+            display: grid;
+            height: 100vh;
+        }
+        #mobile_menu{
+            display: none;
+        }
+        @media (min-width:363px)and (max-width:767px){
+            #site{
+                grid-template-columns: 100%;
+                grid-template-rows: 60px 50px auto auto 50px;
+                grid-template-areas: 
+               " site_header"
+               " site_nav"
+               " main"
+               "sidebar"
+               "site_footer"            
+            }
+
+        }
+        
+
+    </style>
+</head>
+<body>
+   <div id="site">
+    <div id="site_header">
+        <span>
+            <img src="image3.jpeg" height="100px" width="100px">
+            <h2>the easy lrearn academy</h2>
+        </span>
+        <ul id="desktop-menu">
+            <li><a href="basic.html">home</a></li>
+            <li><a href="basic1.html">about us</a></li>
+            <li><a href="basic2.html">products</a></li>
+            <li><a href="basic3.html">services</a></li>
+            <li><a href="basic4.html">contact us</a></li>
+        </ul>
+        <img  src="image7.jpeg" height="100px" width="100px">
+    </div>
+         <div id="site_nav">navigation</div>
+         <div id="main">main</div> 
+         <div id="sidebar">sidebar</div> 
+         <div id="site_footer">footer</div>
+   </div> 
+         <div id="mobile_menu_div">
+            <ul>
+                 <li><a href="basic.html">home</a></li>
+            <li><a href="basic1.html">about us</a></li>
+            <li><a href="basic2.html">products</a></li>
+            <li><a href="basic3.html">services</a></li>
+            <li><a href="basic4.html">contact us</a></li>
+            </ul>
+         </div>
+         <script>
+            var ismenuvisible = false;
+            function main_button_click(){
+                if ( ismenuvisible=== true){
+                    //alert ('menu is visable lets hidden it');
+                    ismenuvisible = false;
+                    document.getElementById('mobile_menu_div').style = "display: block";                    
+                }
+                else{
+                    //alert ('menu is hidden lets show it');
+                    ismenuvisible=== true;
+                     document.getElementById('mobile_menu_div').style = "display: none";
+                }
+            }
+         </script>
+</body>
+</html>

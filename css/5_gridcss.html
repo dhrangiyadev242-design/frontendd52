@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         article
+        {
+          background-color: black;
+          color: black;
+          border: 1px solid black;
+          width: 80%;
+          margin: auto;
+          display: grid;
+          /* gried-template-colomns: 100px 500px 100px 100px 200px */                 
+          grid-template-columns: 10% 28% 32%  15%  15%;
+          grid-template-rows: repeat(7, 50px);
+        }
+       
+        div       
+        {
+                  border: 1px solid black;
+                  display: flex;
+                  align-items: center;
+                  padding-left: 20px;
+                  color: blue;
+                  background-color: brown;
+        }
+        div:nth-of-type(-n+5)
+          {
+            justify-content: end;
+            background-color: black;
+            color:brown;
+            padding-right: 10px;
+            font-size: x-large;
+          }
+          div:nth-of-type(-n+2)
+          {
+            justify-content: start;
+          }
+          div:hover
+        {
+            background-color:white;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+       <h1>frid in css</h1>
+       <article>
+        <div>no.</div>
+        <div>name</div>
+        <div>html</div>
+        <div>css</div>
+        <div>javascript</div>
+
+        <div>1.</div>
+        <div>lalji</div>
+        <div>97</div>
+        <div>90</div>
+        <div>90</div>
+       
+         <div>2.</div>
+        <div>manish</div>
+        <div>97</div>
+        <div>80</div>
+        <div>80</div>
+  
+         <div>3.</div>
+        <div>mayur</div>
+        <div>97</div>
+        <div>92</div>
+        <div>80</div>
+
+         <div>4.</div>
+        <div>karan</div>
+        <div>67</div>
+        <div>40</div>
+        <div>50</div>
+
+         <div>5.</div>
+        <div>manas</div>
+        <div>77</div>
+        <div>70</div>
+        <div>70</div>
+         <div>6.</div>
+        <div>devji</div>
+        <div>96</div>
+        <div>91</div>
+        <div>91</div>
+       
+       </article>
+</body>
+</html>
