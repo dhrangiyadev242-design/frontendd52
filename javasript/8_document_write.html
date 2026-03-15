@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button type="button" onclick= "printtable()">generated multiplication table</button>
+        <script>
+            function printtable(){
+                console.log("printtable function called.....")
+                var num=prompt("enter your number",1);
+
+                num=parseInt(num);
+                multiplier=1;
+                result=0;
+
+                  while(multiplier<=10)
+                  {
+                     let result=num*multiplier;
+                    document.write(`${num}*${multiplier}=${result}<br/>`);
+                    multiplier=multiplier+1;
+                }
+                
+
+
+            }
+        </script>
+      
+</body>
+</html>
