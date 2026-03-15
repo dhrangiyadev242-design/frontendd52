@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>compose email</title>
+  </head>
+  <body>
+    <form action="success.html" method="post" >
+      <table border="1" cellpadding="10" cellspacing="5" width="50%" align="center">
+        <tr>
+          <td align="center">
+            <h3>compose email</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="email" name="email" required placeholder="email">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="subject" required placeholder="email subject">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <textarea name="message" id="message" required placeholder="message"
+            rows="10" cols="100" maxlength="2000"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="file">select photos</label>
+              <input type="file" id="file" name="attachment" ></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="send email">
+            <input type="reset" value="clear all">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
