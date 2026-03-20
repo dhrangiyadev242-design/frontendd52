@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>condition opretor</h1>
+      <script>
+        let now=new Date();
+        let hours=now.getHours();
+        let minutes=now.getMinutes();
+        console.log(hours,minutes);
+        let ampm=null;
+        if(hours>12){
+            hours=hours-12;
+            ampm="PM";
+        }
+        else{
+            ampm="am";
+        }
+         let temt=":"+minutes;
+        document.write((hours>12)?(hours-12)+temt+"PM":hours+temt+"AM");
+       
+         //nesting is also possible//
+         /*  let day =null;
+         let dayofweek=now.getDay();
+         day=(dayofweek===1)?"monday":(dayofweek===2)?"tuesday":(dayofweek===3)?"wednesday":(dayofweek===4)?"thureday":
+         (dayofweek===5)?"friday":(dayofweek===6)?"saturday":"sunday";
+         document.write("<br/>"+day);*/
+        let days=
+         ["monday","tuesday","wednesday","thureday",
+         "friday","saturday","sunday"];
+         let day =days[dayofweek];
+         document.write("<br/>"+day);
+
+
+      
+      </script>
+</body>
+</html>
