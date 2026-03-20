@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>example of value property</h1>
+       <h2>intrest calculator</h2>
+       <form action="" onsubmit="return calculateIntrest();">
+        <table border="2"  align="center" cellpading="10" width="80%">
+            <tr>
+                <td>amount</td>
+                <td>
+                    <input type="number" id="amount" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>rate</td>
+                <td>
+                    <input type="number" id="rate" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    year
+
+             
+            <td>
+                <select id="year" required>
+                    <option value="">select year</option>
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                    <option value="3">3 year</option>
+                    <option value="4">4 year</option>
+                    <option value="5">5 year</option>               
+                </select>
+            </td>
+               </td>
+            </tr>
+                <tr>
+                    <td>intrest type</td>
+                    <td>
+                        <label for="simple_intrest">
+      <input type="radio" id="simple_intrest" name="intrest_type" value="1"required>simple intrest
+                        </label>
+
+                        <label for="compound_intrest">
+    <input type="radio" id="compound_intrest" name="intrest_type" value="2"required>compound intrest
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" id="intrest" value="calculate intrest">
+
+                    </td>
+                </tr>
+                  <tr>
+                    <td id="output" colspan="2"></td>
+
+                   
+                  </tr>
+
+        </table>
+       </form>
+       <script>
+        function calculateIntrest(){
+            //alert('form submited')
+            let amount = parseInt(document.getElementById('amount').value);
+            let rate=parseFloat(document.getElementById('rate').value);
+            let year=parseInt(document.getElementById('year').value);
+            let intrest_type=parseInt(document.querySelector("input[name='intrest_type']:checked").value);
+            console.log(amount,rate,year,intrest_type);
+            if(intrest_type===1){
+                let intrest=(amount*rate*year)/100;
+                console.log(intrest);
+                document.getElementById('output').innerHTML=`simple intrest=${intrest}`;
+            }
+            else{
+                 let intrest=(amount*rate*year)/100;
+                 console.log(intrest);
+                 document.getElementById('output').innerHTML=`compound intrest=${intrest}`;
+            }
+            return false;
+        }
+       </script>
+</body>
+</html>
