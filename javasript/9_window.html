@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>window location program</h1>
+       <script>
+       function openwebsite(){
+         let massage= "enter your favorite websire name";
+         let deflotename="https://digitalclassworld.com/business-listing/coaching/the-easy-learn-academy";
+         let sitename=prompt(massage,deflotename);
+         window.location=sitename;
+       }
+       
+        
+       </script>
+       <button type="button" value="click to open website" onclick="openwebsite();">
+        enter your favorite web site name</button>
+       </form>
+       <script>
+           
+        //create user defined function 
+        //function function-name
+        function getUserDetail()
+        {
+            let message = "What is your name";
+            let defaultName = "his name is";
+            //take input from user 
+            let name = prompt(message,defaultName);
+            alert("massage"+defaultName);
+        }
+
+       </script>
+             <!-- no need to use return keyword because it is not anchor tag -->
+        <button type="button" onclick="getUserDetail();">click to give your detail</button>
+
+       
+         
+</body>
+</html>
