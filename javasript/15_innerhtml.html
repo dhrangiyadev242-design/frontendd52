@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*define class*/
+        .highlight{
+            background-color:aliceblue;
+            color: red;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>innerhtml&classname,style.property</h1>
+    <table border="1" align="center" width="90%">
+        <tr>
+            <td width="33.33%">
+                <button type="button" onclick="changetext();">set text</button>
+            </td>
+            <td width="33.33%">
+                <button type="button" onclick="changeclass();">change classname</button>
+            </td>
+            <td width="33.33%">
+                <button type="button" onclick="changestyle();">change style</button>
+
+            </td>
+        </tr>
+        <tr>
+            <td id="one"></td>
+            <td id="two"></td>
+            <td id="three"></td>
+        </tr>
+    </table>
+    <script>
+        //creat function
+        function changetext(){
+          console.log("change text function is called.....");
+          let aarti=`Here is **Ambe Maa ni Aarti (Gujarati lyrics)
+
+**જય આદ્યા શક્તિ મા, જય આદ્યા શક્તિ**<br/>
+આખંડ બ્રહ્માંડ નિપાવ્યા, પાળે પ્રગટ્યા મા… જય આદ્યા શક્તિ<br/>
+
+**દ્વિતીયા બે સ્વરૂપ, શિવ શક્તિ જાણું મા**<br/>
+બ્રહ્મા ગણપતિ ગાઉં, હર ગાઉં હર મા… જય આદ્યા શક્તિ<br/>
+
+**તૃતીયા ત્રણ સ્વરૂપ, ત્રિભુવનમાં બેઠાં મા**<br/>
+દયા થકી તરવાડા, તું તરણેતા મા… જય આદ્યા શક્તિ<br/>
+
+**ચોથા ચતુરા મહાલક્ષ્મી મા, સચરાચર વ્યાપ્યાં મા**<br/>
+ચાર ભુજા ચૌદ દિશા, પ્રગટ્યાં દક્ષિણમાં… જય આદ્યા શક્તિ<br/>
+
+**પાંચમા પાંચ તત્ત્વ, પંચમી પદમાં મા**<br/>
+પંચ પ્રાણ પાળે, પંચમ વેદમાં મા… જય આદ્યા શક્તિ<br/>
+
+**ષષ્ઠી તું નારાયણી, મહિષાસુર માર્યો મા**<br/>
+નાર નારીના રૂપે, વ્યાપ્યાં સર્વત્ર મા… જય આદ્યા શક્તિ<br/>
+
+**સપ્તમી સપ્ત પાતાળ, સંધ્યા સાવિત્રી મા**<br/>
+ગૌ ગંગા ગાયત્રી, ગૌરી ગીતા મા… જય આદ્યા શક્તિ<br/>
+
+**અષ્ટમી અષ્ટ ભુજા, આઈ આનંદ મા**<br/>
+સુરનાર મુનિજન, જનમે જનમે ગાય મા… જય આદ્યા શક્તિ<br/>
+
+**નવમી નવદુર્ગા, સેવ્ય નવદિવસ મા**<br/>
+નવરાત્રિના પૂજન, શિવરાત્રિના અર્ચન મા… જય આદ્યા શક્તિ<br/>
+
+**દશમી દશ અવતાર, જય વિજયાદશમી મા**<br/>
+રામે રાવણ રોળ્યો, રામ રાજ સ્થાપ્યો મા… જય આદ્યા શક્તિ`;
+document.getElementById('one').innerHTML=aarti;
+
+        }
+       
+        function changeclass(){
+            console.log("change class function is called....");
+            document.getElementById('two').className="highlight";
+        }
+       function changestyle(){
+        console.log("change style function is called....");
+        document.getElementById('three').style="text-align:center;padding=10px" ;
+       }
+            
+        
+    </script>
+
+</body>
+</html>
