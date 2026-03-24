@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 align="center">arrow function</h1>
+    <form action="">
+        <table border="1" cellpadding="10" align="center">
+            <tr>
+                <td>Enter number</td>
+                <td>
+                    <input type="number" name="num" id="num" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    select operation
+                </td>
+                <td>
+                    <label for="">
+                        <input type="checkbox" name="square" id="square" value="1" />
+                        Square
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="qube" id="qube" value="2" />
+                        Qube
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="calculate" onclick="calculate();"/>
+                    <!--<input type="submit" value="calculate"-->
+
+                </td>
+            </tr>
+            <tr>
+                <td>Square <span id="output1"></span></td>
+                <td>Qube <span id="output2"></span></td>
+            </tr>
+
+
+        </table>
+    </form>
+    <script>
+        //arrow function
+        let getSquare = (number)=> number * number;
+        let getQube = (number)=> getSquare(number) * number;
+
+        //creat function using 2nd technique
+        let calculate = function(){
+            //alert ('form submitted')
+            let num = document.getElementById('num').value;
+            let square = document.getElementById('square');
+            let qube = document.getElementById('qube');
+            //alert(num)
+            console.log(square,qube);
+            if(num===''){
+              alert('number can not be be black and must be only one digits');
+              document.getElementById('num').value=""; //textbox emty
+              document.getElementById('num').focus();
+            }
+            else{
+                if(square.checked) //square is selected
+                {
+                    document.getElementById('output1').innerHTML= getSquare(num);
+                }
+                if(qube.checked){
+                    document.getElementById('output2').innerHTML= getQube(num);
+                }
+                if(!(square.checked || qube.checked))
+                {
+                    alert('please select operation');
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
