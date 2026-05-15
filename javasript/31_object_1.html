@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>creat object using 3rd technique</h1>
+    <table border="1" align="center" cellpadding="10" width="75%">
+        <thead>
+            <tr>
+                <th width="80%">sr no</th>
+                <th>name</th>
+                <th>price</th>
+                <th>qty</th>
+                <th>total</th>
+            </tr>
+        </thead>
+        <tbody id="output">
+            <script>
+                //creat object useing 3rd tachnique
+                function product(name, price, quantity) {
+
+
+                    //creat property variable
+                    this.name = name,
+                    this.price = price,
+                    this.quantity = quantity,
+                    this.total = price*quantity,
+                    this.add = function () {
+                        console.log(this.name + "" + this.price + "" + this.quantity + "" + this.total);
+                        let row = `<tr>
+                            <td></td>
+                            <td>${this.name}</td>
+                             <td>${this.price}</td>
+                              <td>${this.quantity}</td>
+                               <td>${this.total}</td>
+
+                             
+                            </tr>`;
+                        document.getElementById('output').innerHTML=row;
+                    }
+                }
+                let p1 = new product('I phone 17', 8000, 2);
+                p1.add();
+            </script>
+
+        </tbody>
+
+    </table>
+</body>
+
+</html>
