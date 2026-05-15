@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h2 id="text"> hover over me!</h2>
+      <script>
+        let text=document.getElementById("text");
+        text.addEventListener("mouseover", function(){
+            text.style.color="red";
+        }
+
+        );
+          text.addEventListener("mouseout", function(){
+            text.style.color="black";
+        }
+
+        );
+        
+
+      </script>
+
+</body>
+</html>

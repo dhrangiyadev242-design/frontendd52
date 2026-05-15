@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1st way to creat object
+
+    </h1>
+    <table border="1" cellpadding="20">
+        <tr>
+            <td id="num1"></td>
+            <td id="num2"></td>
+        </tr>
+        <tr>
+            <td>addition</td>
+            <td id="Addition"></td>
+        </tr>
+        <tr>
+            <td>substraction</td>
+            <td id="Substraction"></td>
+        </tr>
+        <tr>
+            <td>multiplication</td>
+            <td id="Multiplication"></td>
+        </tr>
+        <tr>
+            <td>division</td>
+            <td id="Division"></td>
+        </tr>
+
+    </table>
+    <b>use concole</b>
+    <script>
+        //creat object mymath
+        var MyMath = {
+            num1: 0,
+            num2: 0,
+            input: function (num1, num2) {
+                this.num1 = num1;
+                this.num2 = num2;
+            },
+            display: function () {
+                console.log(this.num1, this.num2);
+                document.getElementById('num1').innerHTML = this.num1;
+                document.getElementById('num2').innerHTML = this.num2;
+            },
+            getAddition: function () {
+                return this.num1 + this.num2;
+            },
+            getSubstraction: function () {
+                return this.num1 - this.num2;
+            },
+            getMultiplication: function () {
+                return this.num1 * this.num2;
+            },
+
+            getDivision: function () {
+                if (this.num2 === 0) {
+                    return "cannot divide by zero";
+                }
+                return this.num1 / this.num2;
+            },
+        };
+        var num1 = 11, num2 = 4;
+        MyMath.input(num1, num2);
+        MyMath.display();
+
+        //addition
+        let add = MyMath.getAddition();
+        console.log("Addition:" + add);
+        document.getElementById('Addition').innerHTML = add;
+
+        //subtraction
+        let sub = MyMath.getSubstraction();
+        console.log("Substraction:" + sub);
+        document.getElementById('Substraction').innerHTML = sub;
+
+        //multiplication
+        let mul = MyMath.getMultiplication();
+        console.log("Multiplication:" + mul);
+        document.getElementById('Multiplication').innerHTML = mul;
+
+        //division
+        let div = MyMath.getDivision();
+        console.log("Division:" + div);
+        document.getElementById('Division').innerHTML = div;
+    </script>
+</body>
+
+</html>
