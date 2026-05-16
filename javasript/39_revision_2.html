@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>revision</h1>
+    <h2>Creating objects</h2>
+    <table border="2" align="center" cellpadding="10">
+        <tr>
+            <td>Addition</td>
+            <td id="one"></td>
+        </tr>
+        <tr>
+            <td>Subtraction</td>
+            <td id="two"></td>
+        </tr>
+        <tr>
+            <td>Multiplication</td>
+            <td id="three"></td>
+        </tr>
+        <tr>
+            <td>get maximum</td>
+            <td id="four"></td>
+        </tr>
+    </table>
+    <table border="1" cellpadding="10" width="80%">
+        <thead>
+            <tr>
+                <th>sr no</th>               
+                <th>name</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>total</th>
+            </tr>
+        </thead>
+        <tbody id="shop">
+
+        </tbody>
+
+
+    </table>
+    <table border="1" cellpadding="10" width="70%" align="center">
+        <thead>
+            <tr>
+                <th colspan="4">coures information</th>
+            </tr>
+            <tr>
+                 <th>sr no</th>               
+                <th>name</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>total</th>
+            </tr>
+        </thead>
+        <tbody id="collage">
+
+        </tbody>
+
+    </table>
+    <script>
+     
+        //create object using 1st technique
+        var MyMath = {
+            //property variable
+            num1: 10,
+            num2: 3,
+            //methods
+            addition: function () {
+                //methods of object can directly access property variable of same object using this keyword
+                let result = this.num1 + this.num2;
+                document.getElementById('one').innerHTML = result;
+            }
+            //now add methods for subtraction,multiplication, division
+        }
+        //calling method
+        MyMath.addition();
+
+        //create method using 2nd technique
+        var MyMath2 = new Object({
+            num1: 10,
+            num2: 3,
+            //methods
+            subtraction: function () {
+                //methods of object can directly access property variable of same object using this keyword
+                let result = this.num1 - this.num2;
+                document.getElementById('two').innerHTML = result;
+            }
+        });
+
+        //create object variable using object
+        var m2 = MyMath2;
+        m2.subtraction();
+        var count = 1;
+        function Product(name, price, stock) {
+            this.name = name;
+            this.price = price;
+            this.stock = stock;
+            this.add = function () {
+                let output = `<tr>
+                <td>${count}</td>
+                <td>${this.name}</td>
+                <td>${this.price}</td>
+                <td>${this.stock}</td>
+                <td>${this.price * this.stock}</td>
+            </tr>`;
+                document.getElementById('shop').innerHTML += output;
+                count++;
+            }
+        }
+
+        //create object variable
+        let p1 = new Product("IPhone 17 pro max", 99999, 2);
+        p1.add();
+
+        let p2 = new Product("macbook pro", 100999, 5);
+        p2.add();
+           var courseCount = 1; //global variable
+        //create object using ES6 way (class)
+        class Course {
+            //callback function
+            constructor(name, duration, price) {
+                //create property/instance variable
+                this.name = name;
+                this.duration = duration;
+                this.price = price;
+                console.log('constructor called.');
+            }
+
+            add() {
+                let output = `<tr>
+                    <td>${courseCount++}</td>
+                    <td>${this.name}</td>
+                    <td>${this.duration}</td>
+                    <td>${this.price}</td>
+                </tr>`;
+                document.getElementById('college').innerHTML += output;
+            }
+        }
+        //create object variable using class 
+        let c1 = new Course('BCA', '3 Year', 75000);
+        c1.add();
+        let c2 = new Course('MCA', '2 Year', 99000);
+        c2.add();
+     
+        
+    </script>
+
+</body>
+</html>

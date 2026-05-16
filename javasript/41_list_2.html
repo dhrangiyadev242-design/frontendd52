@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>map function</h1>
+    <table border="1" width="80%" cellpadding="10">
+        <tr>
+            <td id="output1"></td>
+            <td id="output2"></td>
+        </tr>
+
+    </table>
+    <script>
+        //create list 
+        const countries = ["Nigeria", "Egypt", "Poland", "South Africa", "Kenya", "England", "Morocco", "India", "China", "Japan", "Nitherland", "Indonesia", "Saudi Arabia", "United Kingdom", "Germany", "France", "Italy", "Scotland", "Spain", "United States", "Canada", "Mexico", "Cuba", "Costa Rica", "Brazil", "Argentina", "Chile", "Colombia", "Peru", "Australia", "New Zealand", "Fiji", "Turkey", "Israel"];
+        //display as html list 
+        var temp="";
+        countries.map(function(item){
+             //code in this function will run 30 times because countries list has 30 items
+             console.log(item);
+             temp+=`<li>${item}</li>`;
+        });
+        temp= "<ol>"+temp+"</ol>";
+        document.getElementById("output1").innerHTML=temp;
+
+           //filter countries whose name ends with 'land'
+           let filterCountries = countries.filter(function(item)
+        {
+            if(item.endsWith('land')==true)
+            return item;
+        });
+        console.log(filterCountries );
+        var temp="";
+        filterCountries.map(function(item){
+                //code in this function will run 30 times because countries list has 30 items
+                console.log(item);
+                temp+=`<li>${item}</li>`;
+
+        });
+        temp = "<ol>"+temp+"</ol>";
+        document.getElementById('output2').innerHTML=temp;
+    </script>
+</body>
+</html>
