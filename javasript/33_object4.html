@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12  bg-light shadow">
+                <h4>4th way to creat object</h4>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-2 bg-light vh-100 shadow">
+                        <form onsubmit="return addPlayer();">
+                            <div class="md-3">
+                                <label for="name" class="form-lable">name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                                 <div class="invalid-feedback">name is required</div>
+                               </div>
+
+                                <div class="md-3">
+                                <label for="runs" class="form-lable">runs</label>
+                                <input type="number" id="runs" name="runs" class="form-control" required>
+                                 <div class="invalid-feedback">enter runs (0 or more)</div>
+                               </div>
+                                <div class="md-3">
+                                <label for="ball" class="form-lable">ball</label>
+                                <input type="number" id="ball" name="ball" class="form-control" required>
+                                 <div class="invalid-feedback">ball ball fas(atlest 1)</div>
+                               </div>
+                                <div class="md-3">
+                                <label for="four" class="form-lable">four</label>
+                                <input type="number" id="four" name="four" class="form-control" required>
+                                 <div class="invalid-feedback">four(1)</div>
+                               </div>
+                                <div class="md-3">
+                                <label for="six" class="form-lable">six</label>
+                                <input type="number" id="six" name="six" class="form-control" required>
+                                 <div class="invalid-feedback">six(1)</div>
+                               </div>
+                               <button type="submit" class="btn btn-primary">submit</button>
+                            </form>                   
+                </div>
+                <div class="col-lg-10 p-3">
+                    <div class="row" id="team">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+            <script>
+                function addPlayer(){
+                    //creat variable to store input
+                    var name=document.getElementById('name').value;
+                    var runs=document.getElementById('runs').value;
+                    var ball=document.getElementById('ball').value;
+                    var four=document.getElementById('four').value;
+                    var six=document.getElementById('six').value;
+                    //now creat class using objectg
+                    //var=object=new class(value)
+                    var p1=new player(name,runs,ball,four,six);//it will run contstuctor automatically
+                    p1.add();
+
+                    return false;
+                
+                }
+                //creat class
+                class player{
+                    //creat property variable inside construction
+                    constructor(name,runs,ball,four,six){
+                         //this function will be called automatically when we create object of class such functions are known as callback function 
+                         this.name=name;
+                         this.runs=runs;
+                         this.ball=ball;
+                         this.four=four;
+                         this.six=six;
+
+                    }
+                    add(){
+                        console.log(this);
+                        let card= `<div class="col-lg-3 md-3">
+                            <div class="card shadow">
+                               <div class="card-header text-bg-primary d-flex justify-content-between">
+                                <h4>${this.name}</h4> 
+                                  <div>
+                            <i class="fa  fa-edit" ></i>
+                            <i class="fa  fa-trash"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item "><b>Runs</b> ${this.runs}</li>
+                            <li class="list-group-item "><b>Ball</b> ${this.ball}</li>
+                            <li class="list-group-item "><b>Fours</b> ${this.four}</li>
+                            <li class="list-group-item "><b>Six</b> ${this.six}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>`;
+            document.getElementById('team').innerHTML+=card;
+        }   
+    }
+
+</Script>
+</body>
+
+</html>

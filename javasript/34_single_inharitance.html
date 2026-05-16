@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single line inhRITnce</title>
+    <H1>single line inharitance</H1>
+    <div id="output">
+        <script>
+            var output=document.getElementById('output');
+            //creat base/parents class
+            class person{
+                walk(){
+                   output.innerHTML+='person can walk <br/>';
+                }
+                 talk(){
+                   output.innerHTML+='person can talk <br/>';
+                }
+            }
+                //create child/sub/derived class
+                class student extends person{
+                    read(){
+                        output.innerHTML+='person can read <br/>';
+                    }
+                      write(){
+                        output.innerHTML+='person can write <br/>';
+                    }
+                    whatICanDo(){
+                        //call parent class walk method
+                        super.walk();
+                        //call parent class talk method
+                        super.talk();
+                        //call same class method read
+                        this.read();
+                         //call same class method write
+                        this.write();
+                        
+                    }
+                    
+                    
+                }
+                //creat student class object
+                var s1=new student;
+                //call method of student class
+                s1.whatICanDo();
+        </script>
+
+    </div>
+</head>
+<body>
+    
+</body>
+</html>

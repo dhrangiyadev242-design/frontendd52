@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .calculator {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+        }
+
+        #display {
+            width: 100px;
+            height: 50px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            text-align: right;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 10px;
+        }
+
+        button {
+            height: 50px;
+            font-size-adjust: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #667eea;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: yellow;
+        }
+
+
+        .equal {
+            background: #28a745;
+        }
+
+        .clear {
+            background: #dc3545;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="press(7)">7</button>
+            <button onclick="(8)">8</button>
+            <button onclick="press(9)">9</button>
+            <button onclick="setOp('/')">÷</button>
+            <button onclick="press(4)">4</button>
+            <button onclick="press(5)">5</button>
+            <button onclick="press(6)">6</button>
+            <button onclick="setOp('*')">*</button>
+            <button onclick="press(1)">1</button>
+            <button onclick="press(2)">2</button>
+            <button onclick="press(3)">3</button>
+            <BUtton onclick="setOp('-')">-</BUtton>
+            <button onclick="press(0)">0</button>
+            <button class="clear" onclick="clearDisplay()">c</button>
+            <button class="equal" onclick="calculate()">=</button>
+            <button onclick="setOp('+')">+</button>
+        </div>
+    </div>
+    <script>
+        var MyMath = {
+            num1: 0,
+            num2: 0,
+            operator: "",
+
+            input: function (n1, n2, op) {
+                this.num1 = n1;
+                this.num2 = n2;
+                this.operator = op;
+            },
+            calculate: function () {
+                switch (this.operator) {
+                    case '+': return this.num1 + this.num2;
+                    case '-': return this.num1 - this.num2;
+                    case '*': return this.num1 * this.num2;
+                    case '/': return this.num2===0 ? "Error" : this.num1/this.num2;
+                    default: return 0;
+
+                }
+            }
+        };
+        let current="";
+        let operator=""; 
+        let fristValue="";
+
+        function press(num){
+            current+=num;
+            document.getElementById("display").value=current;
+
+
+        }
+        function setOp(op){
+            fristValue= current;
+            operator=op;
+            current= "";
+        }
+        function calculate(){
+            let secondValue=current;
+
+            MyMath.input(
+                parseFloat(fristValue),
+                parseFloat(secondValue),
+                operator
+
+            );
+            let result = MyMath.calculate();
+            document.getElementById("display").value=result;
+            current=result.toString();
+        }
+        function clearDisplay(){
+            current= "";
+            fristValue= "";
+            operator= "";
+            document.getElementById("display").value= "";
+        }
+    </script>
+
+</body>
+
+</html>
