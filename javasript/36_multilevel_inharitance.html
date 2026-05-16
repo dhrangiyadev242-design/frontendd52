@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <h1>multilevel inharitance</h1
+    <div id="output">
+
+    </div>
+    <script>
+        var output=document.getElementById('output');
+        //create base/parent class
+        class person {
+            //create constructor to add property variable
+            constructor(name) 
+            {
+                this.name=name;
+                console.log('person class constructor called');
+            }
+            walk() {
+                output.innerHTML += `${this.name} can walk<br/>`;
+            }
+            talk() {
+                output.innerHTML += `${this.name} can talk<br/>`;
+            }
+        }
+        //create child/sub/derived class
+        class student extends person {
+            //if parent class has constructor with argument,then child class must have constructor with arguments
+            constructor(name, language) {
+                //must call parent class constructor
+                super(name);
+                this.language=language;
+                console.log('student class constructor called');
+
+
+            }
+            read() 
+            {
+                output.innerHTML += `${this.name} can read ${this.language}<br/>`;
+            }
+            write() 
+            {
+                output.innerHTML += `${this.name} can write ${this.language}<br/>`;
+            }
+            whatICanDo()
+             {
+                //call parent class walk method
+                super.walk();
+                //call parent class talk method
+                super.talk();
+                //call same class method read
+                this.read();
+                //call same class method write 
+                this.write();
+            }
+        }
+                //student derived class so it is multi level inheritance
+                class developer extends student{
+                    
+            //if parent class has constructor then child class must have constructor
+            constructor(name,language,platform){
+                 //call parent constructor (required)
+                 super(name,language);
+                 this.platform=platform;
+            }
+              code()
+              {
+               output.innerHTML += `${this.name} can write code on ${this.platform}<br/>`;
+              }
+               debug(){
+               output.innerHTML += `${this.name} can  debug on ${this.platform}<br/>`;
+
+
+              }
+                //if parent & child both class has same function(name,argument) then it is called method overidding
+                whatICanDo(){
+                    super.whatICanDo(); //calling parent class function
+                    this.code();
+                    this.debug();
+                }
+                }
+                var d1= new developer("lalji dhrangiya", "english", "mern");
+                d1.whatICanDo();
+
+                
+   
+   
+      
+                
+  
+     
+       
+    </script>
+</body>
+
+</html>

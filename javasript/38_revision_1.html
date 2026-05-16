@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>revision</h1>
+  <h1>function</h1>
+  <table border="2" align="center" cellpadding="10">
+    <tr>
+      <td>addition</td>
+      <td id="one"></td>
+    </tr>
+    <tr>
+      <td>substraction</td>
+      <td id="two"></td>
+    </tr>
+    <tr>
+      <td>multiplication</td>
+      <td id="three"></td>
+    </tr>
+    <tr>
+      <td>division</td>
+      <td id="four"></td>
+       </tr>
+
+      <tr>
+        <td>get Max</td>
+        <td id="five"></td>
+      </tr>
+      <tr>
+        <td>get Min</td>
+        <td id="six"></td>
+      </tr>
+   
+
+
+  </table>
+  <script>
+    //create function using 1st technique 
+    function add(num1, num2) {
+      //local variable
+      let result = num1 + num2;
+      return result;
+    }
+    //create function using 2nd technique 
+    let sub = function (num1, num2) {
+      //local variable
+      let result = num1 - num2;
+      return result;
+    }
+    //create function using 3rd technique
+    let mul = (num1, num2) => num1 * num2;
+     let div = (num1,num2)=>{
+    if(num2!==0){
+      return num1/num2;
+    }
+    else{
+      return "division by zero is not allowed";
+    }
+  }
+    //create function 
+    let getMax = (num1, num2) => {
+      if (num1 > num2)
+        return num1;
+      
+      else
+        return num2;
+      
+    }
+    let getMin = (num1,num2)=>
+{
+  if(num1<num2)
+  return num1;
+else
+return num2;
+}
+          
+    var num1 = 1;
+    var num2 = 2;
+    let result = add(num1, num2);
+    document.getElementById('one').innerHTML = result;
+    result = sub(num1, num2);
+    document.getElementById('two').innerHTML = result;
+
+    document.getElementById('three').innerHTML = mul(num1, num2);
+    document.getElementById('four').innerHTML = div(num1, num2);
+    document.getElementById('five').innerHTML = getMax(num1, num2);
+    document.getElementById('six').innerHTML = getMin(num1,num2);
+
+
+
+  </script>
+ 
+</body>
+
+</html>

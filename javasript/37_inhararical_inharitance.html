@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>inhararical inharitance</h1>
+    <table border="2" cellpadding="10">
+        <tr>
+            <td>circle</td>
+            <td id="c1"></td>
+        </tr>
+        <tr>
+            <td> Cyliender volume</td>
+            <td id="c2"></td>
+        </tr>
+    </table>
+    <script>
+        //parent class
+        class MyMath {
+            //create methods 
+            getSquare(number) {
+                //variables declared inside method of class/object is called local variable
+                let temp = number * number;
+                return temp;
+            }
+            getPi() {
+                let temp = 22 / 7;
+                return temp;
+
+            }
+        }
+        //child class 
+        class Circle extends MyMath {
+            //redius
+            constructor(radius) {
+                super();//calling not existing parent class constructor (required)
+                this.radius = radius;
+            }
+            getArea() {
+                //here all variables are local variables
+                let pi = super.getPi();
+                let Square = super.getSquare(this.radius);
+                let area = pi * Square;
+                return area;
+
+            }
+        }
+        // child class
+        class Cyliender extends MyMath {
+            constructor(radius, height) {
+                super();
+                this.radius = radius;
+                this.height = height;
+            }
+            getVolume() {
+                let pi = super.getPi();
+                let Square = super.getSquare(this.radius);
+                let volume = pi * Square * this.height;
+                return volume;
+            }
+        }
+        //create circle class object
+        var radius = parseInt(prompt("Enter radius", 0));
+        var c1 = new Circle(radius);
+        var area = c1.getArea();
+        document.getElementById('c1').innerHTML = area.toFixed(2);
+
+        //create Cyliender class object 
+        var height = parseInt(prompt("Enter height", 0));
+        var c2 = new Cyliender(radius, height);
+        var volume = c2.getVolume();
+        document.getElementById('c2').innerHTML = volume.toFixed(3);
+    </script>
+</body>
+
+</html>
