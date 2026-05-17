@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>object cloning</h1>
+     <b>use console</b>
+
+     <script>
+        //creat object
+        let coures={
+            name:"mern-stack",
+            duration:10,
+            fees:15000,
+        }
+        console.log(coures);
+
+        //copy object into another object
+        //wrong way
+        //let another way to creat object
+
+        let another_coures={};
+        //use foreach loop to copy each and every property and itsvalue into another coures object
+
+        for(let key in coures){
+            console.log(key,coures[key]);
+            another_coures[key]=coures[key];
+
+        }
+
+        another_coures.duration=180;
+        another_coures.fees=25000;
+        another_coures.name="python & djengo"
+        console.log("coures :",coures);
+        console.log("another_coures :",another_coures);
+     </script>
+</body>
+</html>

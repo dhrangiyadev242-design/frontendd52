@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>working with cookie(read(fetch)cookie)</h1>
+     <script src="cookie.js"></script>
+     <script>
+        let name = getCookie('name');
+        let age = getCookie('age');
+        let weight = getCookie('weight');
+        let city = getCookie('city');//if cookie does not existes , function return nothing
+        console.log(name,age,weight,city);
+     </script>
+</body>
+</html>
