@@ -1,0 +1,400 @@
+<!-- trainers.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Trainers - PowerGym</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+        }
+
+        /* Navbar */
+
+        .navbar-brand{
+            font-size:30px;
+            font-weight:bold;
+            color:#ff3c00 !important;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+            transition:0.3s;
+        }
+
+        .nav-link:hover{
+            color:#ff3c00 !important;
+        }
+
+        /* Hero Section */
+
+        .trainer-hero{
+
+            height:50vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+
+            url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438')
+            center/cover no-repeat;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            text-align:center;
+            color:white;
+        }
+
+        .trainer-hero h1{
+            font-size:70px;
+            font-weight:bold;
+        }
+
+        .trainer-hero p{
+            font-size:22px;
+        }
+
+        /* Trainer Section */
+
+        .trainer-section{
+            padding:80px 0;
+        }
+
+        .trainer-card{
+
+            background:white;
+
+            border-radius:20px;
+
+            overflow:hidden;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+            transition:0.4s;
+
+            height:100%;
+        }
+
+        .trainer-card:hover{
+            transform:translateY(-10px);
+        }
+
+        /* Equal Image Size */
+
+        .trainer-card img{
+
+            width:100%;
+            height:350px;
+
+            object-fit:cover;
+        }
+
+        .trainer-content{
+            padding:25px;
+            text-align:center;
+        }
+
+        .trainer-content h3{
+            color:#ff3c00;
+            margin-bottom:10px;
+            font-size:30px;
+        }
+
+        .trainer-content h5{
+            color:#555;
+            margin-bottom:15px;
+        }
+
+        .trainer-content p{
+            color:#666;
+            line-height:28px;
+        }
+
+        /* Button */
+
+        .trainer-btn{
+
+            background:#ff3c00;
+            color:white;
+
+            padding:12px 30px;
+
+            border-radius:5px;
+            text-decoration:none;
+
+            display:inline-block;
+            margin-top:15px;
+
+            transition:0.3s;
+        }
+
+        .trainer-btn:hover{
+            background:#d63000;
+            color:white;
+        }
+
+        /* Footer */
+
+        .footer{
+            background:#111;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:50px;
+        }
+
+        .footer h4{
+            color:#ff3c00;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            PowerGym
+        </a>
+
+        <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+        id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/services">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/trainers">
+                        Trainers
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="trainer-hero">
+
+    <div>
+
+        <h1>
+            Our Trainers
+        </h1>
+
+        <p>
+            Professional • Experienced • Motivating
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Trainers Section -->
+
+<section class="trainer-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Trainer 1 -->
+
+            <div class="col-md-4">
+
+                <div class="trainer-card">
+
+                    <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc">
+
+                    <div class="trainer-content">
+
+                        <h3>
+                            Rahul Sharma
+                        </h3>
+
+                        <h5>
+                            Weight Training Coach
+                        </h5>
+
+                        <p>
+                            Expert in muscle building and strength
+                            training with 8+ years experience.
+                        </p>
+
+                        <a href="/contact"
+                        class="trainer-btn">
+
+                            Contact Trainer
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Trainer 2 -->
+
+            <div class="col-md-4">
+
+                <div class="trainer-card">
+
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a">
+
+                    <div class="trainer-content">
+
+                        <h3>
+                            Priya Patel
+                        </h3>
+
+                        <h5>
+                            Yoga & Fitness Coach
+                        </h5>
+
+                        <p>
+                            Professional yoga trainer helping members
+                            improve flexibility and fitness.
+                        </p>
+
+                        <a href="/contact"
+                        class="trainer-btn">
+
+                            Contact Trainer
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Trainer 3 -->
+
+            <div class="col-md-4">
+
+                <div class="trainer-card">
+
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+
+                    <div class="trainer-content">
+
+                        <h3>
+                            Amit Verma
+                        </h3>
+
+                        <h5>
+                            Cardio Specialist
+                        </h5>
+
+                        <p>
+                            Specialist in cardio workout and weight
+                            loss transformation programs.
+                        </p>
+
+                        <a href="/contact"
+                        class="trainer-btn">
+
+                            Contact Trainer
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    <h4>
+        PowerGym
+    </h4>
+
+    <p>
+        Train Hard • Stay Strong • Be Fit
+    </p>
+
+    <p>
+        © 2026 PowerGym. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

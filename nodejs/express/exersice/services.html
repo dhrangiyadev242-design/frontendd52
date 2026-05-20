@@ -1,0 +1,408 @@
+<!-- services.html -->
+
+<!-- services.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Services - PowerGym</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#111;
+            color:white;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background:black !important;
+        }
+
+        .navbar-brand{
+            font-size:30px;
+            font-weight:bold;
+            color:#00ff99 !important;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+            transition:0.3s;
+        }
+
+        .nav-link:hover{
+            color:#00ff99 !important;
+        }
+
+        /* Hero Section */
+
+        .services-hero{
+
+            height:60vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)),
+
+            url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48')
+            center/cover no-repeat;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            text-align:center;
+        }
+
+        .services-hero h1{
+            font-size:75px;
+            font-weight:bold;
+            color:#00ff99;
+        }
+
+        .services-hero p{
+            font-size:22px;
+            margin-top:15px;
+        }
+
+        /* Services Section */
+
+        .services{
+            padding:90px 0;
+        }
+
+        /* Service Box Different Design */
+
+        .service-box{
+
+            background:#1c1c1c;
+
+            border-left:6px solid #00ff99;
+
+            padding:35px;
+
+            border-radius:15px;
+
+            transition:0.4s;
+
+            height:100%;
+        }
+
+        .service-box:hover{
+            transform:scale(1.05);
+            background:#222;
+        }
+
+        .service-icon{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .service-box h2{
+            color:#00ff99;
+            margin-bottom:20px;
+            font-size:32px;
+        }
+
+        .service-box p{
+            color:#ddd;
+            line-height:30px;
+            font-size:17px;
+        }
+
+        /* Price */
+
+        .price{
+            font-size:28px;
+            color:white;
+            font-weight:bold;
+            margin-top:20px;
+        }
+
+        /* Button */
+
+        .btn-service{
+
+            background:#00ff99;
+            color:black;
+
+            padding:12px 30px;
+
+            text-decoration:none;
+
+            border-radius:5px;
+
+            display:inline-block;
+            margin-top:20px;
+
+            font-weight:bold;
+
+            transition:0.3s;
+        }
+
+        .btn-service:hover{
+            background:white;
+            color:black;
+        }
+
+        /* Footer */
+
+        .footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .footer h4{
+            color:#00ff99;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            PowerGym
+        </a>
+
+        <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+        id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/services">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/trainers">
+                        Trainers
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="services-hero">
+
+    <div>
+
+        <h1>
+            Our Services
+        </h1>
+
+        <p>
+            Transform Your Body With Professional Training
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Services -->
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Service 1 -->
+
+            <div class="col-md-4">
+
+                <div class="service-box">
+
+                    <div class="service-icon">
+                        💪
+                    </div>
+
+                    <h2>
+                        Weight Training
+                    </h2>
+
+                    <p>
+
+                        Build strength and muscle using modern
+                        equipment with expert guidance.
+
+                    </p>
+
+                    <div class="price">
+                        ₹1500 / Month
+                    </div>
+
+                    <a href="/contact"
+                    class="btn-service">
+
+                        Join Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Service 2 -->
+
+            <div class="col-md-4">
+
+                <div class="service-box">
+
+                    <div class="service-icon">
+                        🏃
+                    </div>
+
+                    <h2>
+                        Cardio Training
+                    </h2>
+
+                    <p>
+
+                        Improve stamina, heart health and burn
+                        calories with cardio workout programs.
+
+                    </p>
+
+                    <div class="price">
+                        ₹1200 / Month
+                    </div>
+
+                    <a href="/contact"
+                    class="btn-service">
+
+                        Join Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Service 3 -->
+
+            <div class="col-md-4">
+
+                <div class="service-box">
+
+                    <div class="service-icon">
+                        🧘
+                    </div>
+
+                    <h2>
+                        Yoga Classes
+                    </h2>
+
+                    <p>
+
+                        Professional yoga training for flexibility,
+                        balance and stress-free healthy life.
+
+                    </p>
+
+                    <div class="price">
+                        ₹1000 / Month
+                    </div>
+
+                    <a href="/contact"
+                    class="btn-service">
+
+                        Join Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    <h4>
+        PowerGym
+    </h4>
+
+    <p>
+        Train Hard • Stay Strong • Be Fit
+    </p>
+
+    <p>
+        © 2026 PowerGym. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

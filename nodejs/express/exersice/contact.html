@@ -1,0 +1,510 @@
+<!-- contact.html -->
+
+<!-- contact.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - PowerGym</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#0f0f0f;
+            color:white;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background:black !important;
+        }
+
+        .navbar-brand{
+            font-size:32px;
+            font-weight:bold;
+            color:#00ff99 !important;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+            transition:0.3s;
+        }
+
+        .nav-link:hover{
+            color:#00ff99 !important;
+        }
+
+        /* Hero Section */
+
+        .contact-hero{
+
+            height:55vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)),
+
+            url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438')
+            center/cover no-repeat;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            text-align:center;
+        }
+
+        .contact-hero h1{
+            font-size:75px;
+            font-weight:bold;
+            color:#00ff99;
+        }
+
+        .contact-hero p{
+            font-size:22px;
+            margin-top:15px;
+        }
+
+        /* Contact Section */
+
+        .contact-section{
+            padding:90px 0;
+        }
+
+        /* Contact Info Box */
+
+        .contact-info{
+
+            background:#1b1b1b;
+
+            padding:40px;
+
+            border-radius:20px;
+
+            height:100%;
+
+            border:2px solid #00ff99;
+        }
+
+        .contact-info h2{
+            color:#00ff99;
+            margin-bottom:30px;
+            font-size:40px;
+        }
+
+        .info-box{
+
+            background:#252525;
+
+            padding:20px;
+
+            border-radius:12px;
+
+            margin-bottom:20px;
+
+            transition:0.3s;
+        }
+
+        .info-box:hover{
+            transform:translateX(10px);
+            background:#2f2f2f;
+        }
+
+        .info-box h4{
+            color:#00ff99;
+            margin-bottom:10px;
+        }
+
+        .info-box p{
+            color:#ddd;
+            margin:0;
+        }
+
+        /* Membership Button */
+
+        .membership-btn{
+
+            background:#00ff99;
+            color:black;
+
+            padding:14px 35px;
+
+            text-decoration:none;
+
+            border-radius:8px;
+
+            display:inline-block;
+
+            margin-top:20px;
+
+            font-weight:bold;
+
+            transition:0.3s;
+        }
+
+        .membership-btn:hover{
+            background:white;
+            color:black;
+        }
+
+        /* Form Box */
+
+        .form-box{
+
+            background:#1b1b1b;
+
+            padding:40px;
+
+            border-radius:20px;
+
+            border:2px solid #00ff99;
+        }
+
+        .form-box h2{
+            color:#00ff99;
+            margin-bottom:30px;
+            font-size:40px;
+        }
+
+        .form-control{
+
+            background:#252525;
+            border:none;
+
+            color:white;
+
+            height:55px;
+
+            margin-bottom:20px;
+
+            border-radius:10px;
+        }
+
+        .form-control:focus{
+
+            background:#252525;
+            color:white;
+
+            box-shadow:none;
+
+            border:2px solid #00ff99;
+        }
+
+        textarea.form-control{
+            height:150px !important;
+            padding-top:15px;
+        }
+
+        .submit-btn{
+
+            background:#00ff99;
+            color:black;
+
+            width:100%;
+
+            padding:14px;
+
+            border:none;
+
+            border-radius:8px;
+
+            font-size:18px;
+
+            font-weight:bold;
+
+            transition:0.3s;
+        }
+
+        .submit-btn:hover{
+            background:white;
+        }
+       
+        /* Footer */
+
+        .footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        .footer h4{
+            color:#00ff99;
+            margin-bottom:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            PowerGym
+        </a>
+
+        <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+        id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/services">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/trainers">
+                        Trainers
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="contact-hero">
+
+    <div>
+
+        <h1>
+            Contact Us
+        </h1>
+
+        <p>
+            Start Your Fitness Journey Today
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <!-- Contact Info -->
+
+            <div class="col-lg-5">
+
+                <div class="contact-info">
+
+                    <h2>
+                        Get In Touch
+                    </h2>
+
+                    <div class="info-box">
+
+                        <h4>
+                            📍 Address
+                        </h4>
+
+                        <p>
+                            Ahmedabad, Gujarat, India
+                        </p>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h4>
+                            📞 Phone
+                        </h4>
+
+                        <p>
+                            +91 9876543210
+                        </p>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h4>
+                            ✉ Email
+                        </h4>
+
+                        <p>
+                            powergym@gmail.com
+                        </p>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h4>
+                            ⏰ Timing
+                        </h4>
+
+                        <p>
+                            Monday - Saturday : 6AM - 10PM
+                        </p>
+
+                    </div>
+
+                    <!-- Membership Link -->
+
+                    <a href="/membership"
+                    class="membership-btn">
+
+                        Open Membership Form
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+
+            <div class="col-lg-7">
+
+                <div class="form-box">
+
+                    <h2>
+                        Send Message
+                    </h2>
+
+                    <form>
+                        <tr>
+                            <td>
+                                <label for="user Name">user Name</label>
+                            </td>
+                        </tr>
+                       
+                        <input type="text"
+                        class="form-control"
+                        placeholder="Enter Full Name"
+                        required>
+                     
+                        <tr>
+                            <td>
+                                <label for="E-mail">E-mail</label>
+                            </td>
+                        </tr>
+
+                        <input type="email"
+                        class="form-control"
+                        placeholder="Enter Email Address"
+                        required>
+                        <tr>
+                            <td>
+                                <label for="mobile Number">mobile Number</label>
+                            </td>
+                        </tr>
+
+                        <input type="number"
+                        class="form-control"
+                        placeholder="Enter Mobile Number"
+                        required>
+                          <tr>
+                            <td>
+                                <label for="message">message</label>
+                            </td>
+                          </tr>
+                        <textarea class="form-control"
+                        placeholder="Enter Your Message"
+                        required></textarea>
+
+                        <button type="submit"
+                        class="submit-btn">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    <h4>
+        PowerGym
+    </h4>
+
+    <p>
+        Train Hard • Stay Strong • Be Fit
+    </p>
+
+    <p>
+        © 2026 PowerGym. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
