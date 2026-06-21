@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #0d6efd;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+   justify-content: center;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.menu a:hover{
+    color: yellow;
+}
+
+/* Home Page */
+.hero{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1{
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Skills Page */
+.skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.skill-card{
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover{
+    transform: translateY(-5px);
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Lalji Portfolio</div>
+
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/skills">Skills</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+
+        <h1 class="page-titel">My Skills</h1>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h2>HTML ⭐⭐⭐⭐</h2>
+                <p>Building web page structure.</p>
+
+            </div>
+            <div class="skill-card">
+                <h2>css ⭐⭐⭐⭐</h2>
+                <p>Creating responsive and attractive designs.</p>
+            </div>
+            <div class="skill-card">
+                <h2>Javascript ⭐⭐⭐⭐</h2>
+                <p>Adding interactivity and logic.</p>
+            </div>
+            <div class="skill-card">
+                <h2>Node.js ⭐⭐⭐⭐</h2>
+                <p>Server-side JavaScript development.</p>
+            </div>
+            <div class="skill-card">
+                <h2>Express.js ⭐⭐⭐⭐</h2>
+                <p>Building fast web applications and APIs.</p>
+            </div>
+            <div class="skill-card">
+                <h2>MYSQL ⭐⭐⭐⭐</h2>
+                <p> Database Design and managing</p>
+            </div>
+        </div>
+</body>
+
+</html>

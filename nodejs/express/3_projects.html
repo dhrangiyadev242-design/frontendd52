@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        .navbar {
+            background: #0d6efd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: yellow;
+        }
+
+        .page-titel {
+            text-align: center;
+            margin-top: 30px;
+            color: #060606;
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .project-card {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .contact-box button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #0d6efd;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .contact-box button:hover {
+            background: #084298;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Lalji Portfolio</div>
+
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/skills">Skills</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+    <h1 class="page-titel">My Project</h1>
+    <div class="project-container">
+        <div class="project-card">
+            <h2>Student Management System</h2>
+            <p>Manage student records using Node.js and MySQL.</p>
+        </div>
+        <div class="project-card">
+            <h2>E-Commerce API</h2>
+            <p>REST API for products, categories and orders.</p>
+        </div>
+
+        <div class="project-card">
+            <h2>Portfolio Website</h2>
+            <p>Personal portfolio built with Express.js.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
