@@ -1,0 +1,48 @@
+body{
+    background:#f5f7fb;
+}
+
+/* Hero */
+
+.Hero{
+    height:80vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:linear-gradient(
+    135deg,
+    #0d6efd,
+    #6610f2
+    );
+
+    color:white;
+}
+
+.Hero h1{
+    font-size:60px;
+    font-weight:bold;
+}
+
+.Hero p{
+    font-size:22px;
+    margin:20px 0;
+}
+
+/* Category Cards */
+
+.category-card{
+    background:white;
+    padding:40px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.category-card i{
+    font-size:60px;
+    color:#0d6efd;
+}
