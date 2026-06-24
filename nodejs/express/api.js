@@ -11,7 +11,7 @@ let list = [
     { email: "manas@gmail.com", passsword: "123436" },
 ]
 
-app.get("/list", async (request, response) => {
+app.get("/list", (request, response) => {
     response.json(list);
 });
 app.post("/list", (request, response) => {
