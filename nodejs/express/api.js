@@ -58,7 +58,7 @@ app.put("/list", (request, response) => {
         response.json([
             { 'error': 'no' },
             { 'success': 'no' },
-            { 'message': 'contact not found' }
+            { 'message': 'list not found' }
         ]);
     }
 });
