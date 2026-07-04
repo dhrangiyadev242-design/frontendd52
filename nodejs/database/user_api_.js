@@ -15,6 +15,13 @@ app.post("/users/register", (request, response) => {
     if (!name || !email || !mobile || !password) {
         return response.json({ error: 'All Fileds Are Require' });
     }
+        let regex = /^(?=(?:.*[A-Za-z]){2,})[A-Za-z0-9]{6,}$/;
+
+    if (!regex.test(password)) {
+        return response.status(400).json({
+            success: false,
+            message: "Password must be at least 6 characters long and contain at least 2 letters."
+        });
     else {
         let sql = 'select * from users where email=?';
         connection.con.query(sql, [email], function (error, result) {
@@ -59,6 +66,13 @@ app.post("/users/register", (request, response) => {
     if(!email || !password){
         return response.json({error:'Email and Password are required'});
     }
+        let regex = /^(?=(?:.*[A-Za-z]){2,})[A-Za-z0-9]{6,}$/;
+
+    if (!regex.test(password)) {
+        return response.status(400).json({
+            success: false,
+            message: "Password must be at least 6 characters long and contain at least 2 letters."
+        });
     else{
         //SQL Query
         let sql = 'select * from users where email=?';
@@ -97,6 +111,13 @@ app.post("/users/register", (request, response) => {
      if(!email || !old_Password || !new_Password){
         return response.json({error:'All Fields Are Require'});
      }
+         let regex = /^(?=(?:.*[A-Za-z]){2,})[A-Za-z0-9]{6,}$/;
+
+    if (!regex.test(new_password)) {
+        return response.status(400).json({
+            success: false,
+            message: "Password must be at least 6 characters long and contain at least 2 letters."
+        });
      else{
         let sql = 'select * from users where email=?';
         connection.con.query(sql,[email],function(error,result){
@@ -131,6 +152,13 @@ app.post("/users/register", (request, response) => {
      if(!email || !new_Password){
         return response.json({error:'All Fields Are Require '}); 
      }
+         let regex = /^(?=(?:.*[A-Za-z]){2,})[A-Za-z0-9]{6,}$/;
+
+    if (!regex.test(new_Password)) {
+        return response.status(400).json({
+            success: false,
+            message: "Password must be at least 6 characters long and contain at least 2 letters."
+        });
      else{
         let sql = 'select * from  users where email=?';
         connection.con.query(sql,[email],function(error,result){
