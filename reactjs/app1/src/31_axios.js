@@ -29,7 +29,7 @@ function App() {
             })
         }
 
-    });
+    },[]);
     //inner function
     let deletePost = function (postID) {
         //this function runs when user click on delete button
